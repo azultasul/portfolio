@@ -1,4 +1,16 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+import path from 'path'
+import { fileURLToPath } from 'url'
 
-export default nextConfig;
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+
+const nextConfig = {
+  reactStrictMode: true,
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'assets/scss')],
+    // prependData: `@import "@/assets/styles/base/reset.scss"; @import "@/assets/styles/base/fonts.scss";`,
+  },
+}
+
+export default nextConfig

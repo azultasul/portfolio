@@ -1,0 +1,20 @@
+:root {
+  --max-width: 1440px;
+  --base-padding: 16px;
+  /* color */
+  --background: #e5e5e5;
+  --text: #020002;
+  --point-1: #1d36a6;
+  --point-2: #5e80b6;
+  --point-3: #acbdd3;
+}
+html.dark {
+  /* color */
+  --background: #0d2138;
+  --text: #f8f4e9;
+  --point-1: #f6dc55;
+  --point-2: #f6e691;
+  --point-3: #e9e586;
+}
+
+/* #348AE8 */

@@ -1,0 +1,39 @@
+body {
+  background: var(--background);
+  color: var(--text);
+}
+// layout
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gnb {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  backdrop-filter: blur(5px);
+  z-index: 999;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0px;
+    font-size: 18px;
+    font-family: 'ohsquare';
+  }
+  a,
+  button {
+    padding: 8px 0px;
+    cursor: pointer;
+  }
+  &__sub {
+    display: flex;
+    gap: 16px;
+  }
+  &__dark {
+    line-height: 18px;
+  }
+}

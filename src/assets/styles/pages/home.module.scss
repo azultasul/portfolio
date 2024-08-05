@@ -1,0 +1,76 @@
+.intro {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  height: 100vh;
+  &__inner {
+    position: relative;
+    height: 100%;
+  }
+  &__text {
+    position: absolute;
+    left: 0px;
+    bottom: 10vh;
+  }
+  h1 {
+    margin-top: 18px;
+    font-size: 64px;
+    font-family: 'ohsquare';
+  }
+  &__scroll {
+    position: absolute;
+    left: 50%;
+    bottom: 5vh;
+    transform: translate(-50%, 20%);
+  }
+  &__arrow {
+    width: 12px;
+    height: 12px;
+    transform: rotate(45deg);
+    border-right: 2px solid var(--text);
+    border-bottom: 2px solid var(--text);
+    border-radius: 1px;
+    animation: wave 1s infinite;
+    animation-direction: alternate;
+    @for $i from 1 through 3 {
+      &:nth-child(#{$i}) {
+        animation-delay: 0.1s * $i;
+      }
+    }
+    &:nth-child(1) {
+      transform: translate(0, 6px) rotate(45deg);
+    }
+    &:nth-child(2) {
+      transform: rotate(45deg);
+    }
+    &:nth-child(3) {
+      transform: translate(0, -6px) rotate(45deg);
+    }
+  }
+}
+
+@keyframes wave {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.contents {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  margin-top: 100vh;
+  padding-top: 48px;
+  background: var(--background);
+}
+.title {
+  font-size: 32px;
+  font-family: 'ohsquare';
+}

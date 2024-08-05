@@ -1,0 +1,14 @@
+// :root {
+//   --dark: false;
+//   --base-color: #c6538c;
+// }
+
+// // $dark: false;
+// // body:has(.dark) {
+// //   $dark: true;
+// // }
+
+// $base-color: #c6538c;
+// @if $dark {
+//   $base-color: #fff;
+// }
