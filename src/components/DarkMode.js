@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation'
 export default function DarkMode({ className }) {
   let router = useRouter()
   let [mode, setMode] = useState('')
+
   useEffect(() => {
     let cookie = ('; ' + document.cookie).split('; mode=').pop().split(';')[0]
 
@@ -15,6 +16,14 @@ export default function DarkMode({ className }) {
       setMode(cookie)
     }
   }, [])
+
+  useEffect(() => {
+    if (mode === 'dark') {
+      document.querySelector('html').classList.add('dark')
+    } else if (mode === 'light') {
+      document.querySelector('html').classList.remove('dark')
+    }
+  }, [mode])
 
   return (
     <button

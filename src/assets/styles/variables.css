@@ -3,6 +3,7 @@
   --base-padding: 16px;
   /* color */
   --background: #e5e5e5;
+  --background-1: #d6d8dd;
   --text: #020002;
   --point-1: #1d36a6;
   --point-2: #5e80b6;
@@ -11,6 +12,7 @@
 html.dark {
   /* color */
   --background: #0d2138;
+  --background-1: #010406;
   --text: #f8f4e9;
   --point-1: #f6dc55;
   --point-2: #f6e691;

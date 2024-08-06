@@ -19,3 +19,93 @@
   font-display: swap;
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Cafe24Ohsquare.woff') format('woff');
 }
+
+// 참고
+// @font-face {
+//   font-family: 'one';
+//   font-weight: 700;
+//   font-display: swap;
+//   src:
+//     local('OneUISansGUI-700Bold'),
+//     url('@/assets/fonts/OneUISansGUI-700Bold.otf') format('opentype'),
+//     url('@/assets/fonts/OneUISansGUI-700Bold.woff2') format('woff2'),
+//     url('@/assets/fonts/OneUISansGUI-700Bold.woff') format('woff');
+//   unicode-range: U+AC00-D7A3;
+// }
+
+// @font-face {
+//   font-family: 'new';
+//   font-weight: 300;
+//   font-display: swap;
+//   src:
+//     local('NewSEC-300Light'),
+//     url('@/assets/fonts/NewSEC-300Light.otf') format('opentype'),
+//     url('@/assets/fonts/NewSEC-300Light.woff2') format('woff2'),
+//     url('@/assets/fonts/NewSEC-300Light.woff') format('woff');
+//   unicode-range:
+//     U+0041-005A,
+//     U+0061-007A,
+//     U+0030-0039 U+0020-002F,
+//     U+003A-0040,
+//     U+005B-0060,
+//     U+007B-007E;
+// }
+
+// 이전
+
+// @font-face {
+//   font-family: 'malssami';
+//   font-weight: normal;
+//   font-style: normal;
+//   font-display: swap;
+//   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.0/Malssami815.woff') format('woff');
+// }
+// @font-face {
+//   font-family: 'S-CoreDream-2ExtraLight';
+//   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-2ExtraLight.woff') format('woff');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+// @font-face {
+//   font-family: 'Cafe24Simplehae';
+//   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Simplehae.woff') format('woff');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+// @font-face {
+//   font-family: 'TmonMonsori';
+//   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+// @font-face {
+//   font-family: 'S-CoreDream-1Thin';
+//   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-1Thin.woff') format('woff');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+// @font-face {
+//   font-family: 'LotteMartHappy';
+//   font-style: normal;
+//   font-weight: 400;
+//   src:
+//     url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyMedium.woff2') format('woff2'),
+//     url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyMedium.woff') format('woff');
+// }
+// @font-face {
+//   font-family: 'LotteMartHappy';
+//   font-style: normal;
+//   font-weight: 700;
+//   src:
+//     url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyBold.woff2') format('woff2'),
+//     url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyBold.woff') format('woff');
+// }
+// .lottemarthappy * {
+//   font-family: 'LotteMartHappy', sans-serif;
+// }
+// @font-face {
+//   font-family: 'Cafe24Ohsquare';
+//   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Cafe24Ohsquare.woff') format('woff');
+//   font-weight: normal;
+//   font-style: normal;
+// }
