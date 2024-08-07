@@ -10,6 +10,12 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+.contents {
+  position: relative;
+  min-height: 100vh;
+  margin-top: 100vh;
+  background: var(--background);
+}
 
 .gnb {
   position: fixed;

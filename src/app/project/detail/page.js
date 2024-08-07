@@ -1,3 +1,5 @@
-export default function Detail() {
-  return <div></div>
+const Detail = () => {
+  return <h1> 디테일 </h1>
 }
+
+export default Detail
