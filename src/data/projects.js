@@ -243,6 +243,31 @@ const works = [
       },
     ],
   },
+  {
+    id: 'test',
+    star: true,
+    title: 'test',
+    thumb: true,
+    date: '2022-09-26',
+    endDate: null,
+    tech: [0, 5, 6, 8, 14],
+    type: [0],
+    client: 'test',
+    url: '@@@',
+    gitUrl: null,
+    desc: '@@@',
+    learn: ['@@@'],
+    work: [
+      {
+        text: '💻📱 그리드 시스템을 기반으로 반응형으로 작업했습니다.',
+      },
+      {
+        image: '0.gif',
+        title: '@@@',
+        desc: '@@@',
+      },
+    ],
+  },
 ]
 
 export default works

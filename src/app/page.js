@@ -1,12 +1,12 @@
-import styles from '@/assets/styles/pages/home.module.scss'
 import IntroSection from '@/components/IntroSection'
+import styles from '@/assets/styles/pages/home.module.scss'
 
 const Home = () => {
   return (
     <>
       <IntroSection targetName="sh-hello" array={['안녕하세요!', 'HELLO', 'YO!', 'HOLA!', 'SALUT', 'CIAO']} titleArray={['프론트엔드 개발자', '유다솔입니다.']} />
       <div className="contents">
-        <div className={`${styles.contents} container`}>
+        <div className={`${styles.container} container`}>
           <div>
             <h2 className={styles.title}>기술</h2>
             <h2 className={styles.title}>경력</h2>
