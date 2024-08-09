@@ -1,10 +1,14 @@
+import { headers } from 'next/headers'
+
 import IntroSection from '@/components/IntroSection'
-import FilterList from '../../components/FilterList'
 
 import styles from '@/assets/styles/pages/project.module.scss'
-import catData from '@/data/categories'
+import FilterList from '@/components/FilterList'
 
 const Project = () => {
+  const heads = headers()
+  const pathname = heads.get('next-url')
+  console.log('heads', pathname)
   return (
     <>
       <IntroSection targetName="sh-project" array={['프로젝트', 'PROJECT']} />
@@ -12,8 +16,9 @@ const Project = () => {
         <div className={`${styles.container} container`}>
           <div></div>
           <div>
-            <FilterList title={catData.krName.tech} list={catData.tech} />
-            <FilterList title={catData.krName.type} list={catData.type} />
+            <FilterList catName="order" isOrder />
+            <FilterList catName="tech" />
+            <FilterList catName="type" />
           </div>
         </div>
       </div>

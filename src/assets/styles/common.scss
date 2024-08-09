@@ -75,3 +75,13 @@ h3 {
     gap: 4px;
   }
 }
+
+.btn {
+  text-transform: uppercase;
+  background: var(--point-3);
+  color: var(--text);
+  &.active {
+    background: var(--point-1);
+    color: var(--background);
+  }
+}

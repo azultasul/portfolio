@@ -2,7 +2,10 @@ const krName = {
   tech: '기술 스택',
   type: '프로젝트 타입',
 }
-
+const order = {
+  0: '최신순',
+  1: '오래된순',
+}
 const tech = {
   0: 'javascript',
   1: 'frontend',
@@ -32,6 +35,6 @@ const type = {
   1: '디파이',
 }
 
-const catData = { krName, tech, type }
+const catData = { krName, order, tech, type }
 
 export default catData
