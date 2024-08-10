@@ -1,7 +1,7 @@
 .container {
   padding-top: var(--gnb-height);
   display: grid;
-  grid-template-columns: 4fr 1fr;
-  gap: 16px;
+  grid-template-columns: 1fr 4fr;
+  gap: 32px;
   padding: 50px 16px 0px;
 }

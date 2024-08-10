@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useState } from 'react'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
+import styles from '@/assets/styles/components/filterList.module.scss'
 import catData from '@/data/categories'
 
 const FilterList = ({ catName, isOrder = false }) => {
@@ -54,10 +55,10 @@ const FilterList = ({ catName, isOrder = false }) => {
 
   return (
     <div>
-      <h3>{catData.krName[catName] && catData.krName[catName]}</h3>
-      <div className="tag-wrap">
+      <h3 className={styles.title}>{catData.krName[catName] && catData.krName[catName]}</h3>
+      <div className={`${isOrder ? 'tag-wrap tag-wrap--right' : 'tag-wrap'}`}>
         {isOrder || (
-          <button className={`${filteredNum.length > 0 ? 'tag btn' : 'tag btn active'}`} onClick={() => setQueryNum('all')}>
+          <button className={`${filteredNum.length > 0 ? 'tag btn btn--all' : 'tag btn active'}`} onClick={() => setQueryNum('all')}>
             all
           </button>
         )}

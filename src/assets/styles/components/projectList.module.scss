@@ -1,0 +1,35 @@
+.list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px;
+  border: solid 1px var(--point-3);
+  border-radius: 16px;
+  &:hover {
+    border: solid 1px var(--point-1);
+    transition: all 0.3s;
+  }
+  &__title {
+  }
+  &__client {
+    text-align: right;
+  }
+  &__date {
+    text-align: right;
+  }
+  &__desc {
+  }
+  &__tags {
+    justify-content: flex-end;
+  }
+  &__tag {
+    // background: var(--point-3);
+    // color: var(--text);
+  }
+}

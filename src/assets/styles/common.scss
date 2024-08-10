@@ -73,13 +73,24 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     gap: 4px;
+    &--right {
+      justify-content: flex-end;
+    }
   }
 }
 
 .btn {
   text-transform: uppercase;
-  background: var(--point-3);
+  background: transparent;
+  // background: var(--point-3);
   color: var(--text);
+  &--all {
+    background: var(--point-3);
+  }
+  &:hover {
+    background: var(--point-3);
+    transition: all 0.2s;
+  }
   &.active {
     background: var(--point-1);
     color: var(--background);

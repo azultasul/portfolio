@@ -1,4 +1,4 @@
-const works = [
+const projects = [
   {
     id: 'fqled',
     star: false,
@@ -244,6 +244,81 @@ const works = [
     ],
   },
   {
+    id: 'genesis',
+    star: true,
+    title: 'Genesis GV70',
+    thumb: true,
+    date: '2022-09-26',
+    endDate: null,
+    tech: [0, 5, 6, 8, 14],
+    type: [1],
+    client: 'test',
+    url: '@@@',
+    gitUrl: null,
+    desc: '@@@',
+    learn: ['@@@'],
+    work: [
+      {
+        text: '💻📱 그리드 시스템을 기반으로 반응형으로 작업했습니다.',
+      },
+      {
+        image: '0.gif',
+        title: '@@@',
+        desc: '@@@',
+      },
+    ],
+  },
+  {
+    id: 'hcloud',
+    star: true,
+    title: '현대클라우드(HCloud)',
+    thumb: true,
+    date: '2022-09-26',
+    endDate: null,
+    tech: [0, 5, 6, 8, 14],
+    type: [1],
+    client: 'test',
+    url: '@@@',
+    gitUrl: null,
+    desc: '@@@',
+    learn: ['@@@'],
+    work: [
+      {
+        text: '💻📱 그리드 시스템을 기반으로 반응형으로 작업했습니다.',
+      },
+      {
+        image: '0.gif',
+        title: '@@@',
+        desc: '@@@',
+      },
+    ],
+  },
+  {
+    id: 'samsung-health',
+    star: true,
+    title: '삼성헬스',
+    thumb: true,
+    date: '2022-09-26',
+    endDate: null,
+    tech: [0, 5, 6, 8, 14],
+    type: [1],
+    client: 'test',
+    url: '@@@',
+    gitUrl: null,
+    desc: '@@@',
+    learn: ['@@@'],
+    work: [
+      {
+        text: '💻📱 그리드 시스템을 기반으로 반응형으로 작업했습니다.',
+      },
+      {
+        image: '0.gif',
+        title: '@@@',
+        desc: '@@@',
+      },
+    ],
+  },
+  {
     id: 'test',
     star: true,
     title: 'test',
@@ -270,4 +345,4 @@ const works = [
   },
 ]
 
-export default works
+export default projects
