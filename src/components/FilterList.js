@@ -2,7 +2,7 @@
 
 import FilterItem from '@/components/FilterItem'
 import { useRecoilState } from 'recoil'
-import { atomOrder, atomTech, atomType } from '@/recoil/project'
+import { atomOrder, atomTech, atomType } from '@/utils/recoil'
 
 const FilterList = () => {
   const [order, setOrder] = useRecoilState(atomOrder)

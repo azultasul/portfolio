@@ -4,7 +4,7 @@ import { useRecoilValue } from 'recoil'
 import ProjectItem from '@/components/ProjectItem'
 import styles from '@/assets/styles/components/projectList.module.scss'
 import { useEffect } from 'react'
-import { atomOrder, atomTech, atomType } from '@/recoil/project'
+import { atomOrder, atomTech, atomType } from '@/utils/recoil'
 
 const ProjectList = ({ projects }) => {
   const order = useRecoilValue(atomOrder)
