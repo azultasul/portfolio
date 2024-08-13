@@ -4,19 +4,19 @@ import IntroSection from '@/components/IntroSection'
 import styles from '@/assets/styles/pages/project.module.scss'
 import FilterList from '@/components/FilterList'
 import ProjectList from '@/components/ProjectList'
-import projects from '@/data/projects'
 
 const Project = () => {
   const heads = headers()
   const pathname = heads.get('next-url')
-  console.log('heads', pathname)
+  // console.log('heads', pathname)
+
   return (
     <>
       <IntroSection targetName="sh-project" array={['프로젝트', 'PROJECT']} />
       <div className="contents">
         <div className={`${styles.container} container`}>
           <FilterList />
-          <ProjectList projects={projects} />
+          <ProjectList />
         </div>
       </div>
     </>

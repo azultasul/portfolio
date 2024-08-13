@@ -1,8 +1,8 @@
-import { atom } from 'recoil'
+import { atom, selector } from 'recoil'
 
 const atomOrder = atom({
   key: 'at-order',
-  default: ['0'],
+  default: 0,
 })
 const atomTech = atom({
   key: 'at-tech',
@@ -13,4 +13,12 @@ const atomType = atom({
   default: [],
 })
 
-export { atomOrder, atomTech, atomType }
+const projectData = selector({
+  key: 'sel-projects',
+  get: async () => {
+    const response = await fetch('/api/projects', { method: 'GET' }).then((res) => res.json())
+    return response
+  },
+})
+
+export { atomOrder, atomTech, atomType, projectData }

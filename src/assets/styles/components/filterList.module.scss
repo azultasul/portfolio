@@ -1,5 +1,11 @@
 .title {
-  // text-align: right;
   font-size: 16px;
   margin: 16px 0px 4px;
+}
+.btn {
+  &__num {
+    font-size: 10px;
+    vertical-align: super;
+    padding-left: 1px;
+  }
 }
