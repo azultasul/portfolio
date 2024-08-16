@@ -1,7 +1,7 @@
 'use client'
 
-import styles from '@/assets/styles/components/filterList.module.scss'
 import catData from '@/data/categories'
+import styles from '@/assets/styles/pages/projects.module.scss'
 
 const FilterBtn = ({ catName, recoilValue, setRecoil, pjArray }) => {
   const setQueryNum = (curNum) => {

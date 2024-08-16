@@ -6,7 +6,7 @@ const Home = () => {
     <>
       <IntroSection targetName="sh-hello" array={['안녕하세요!', 'HELLO', 'YO!', 'HOLA!', 'SALUT', 'CIAO']} titleArray={['프론트엔드 개발자', '유다솔입니다.']} />
       <div className="contents">
-        <div className={`${styles.container} container`}>
+        <div className={`${styles.container} container container--grid`}>
           <div>
             <h2 className={styles.title}>기술</h2>
             <h2 className={styles.title}>경력</h2>

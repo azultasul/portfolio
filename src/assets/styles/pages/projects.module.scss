@@ -1,3 +1,26 @@
+// filter list
+.filter {
+  position: relative;
+  &__inner {
+    position: sticky;
+    top: 55px;
+    left: 0;
+    right: 0;
+  }
+}
+.title {
+  font-size: 16px;
+  margin: 16px 0px 4px;
+}
+.btn {
+  &__num {
+    font-size: 10px;
+    vertical-align: super;
+    padding-left: 1px;
+  }
+}
+
+// projects list
 .list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

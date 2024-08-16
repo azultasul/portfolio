@@ -5,7 +5,10 @@ const Contact = () => {
     <>
       <IntroSection targetName="sh-contact" array={['컨택미', 'CONTACT']} />
       <div className="contents">
-        <h1>contact</h1>
+        <div className="container container--grid">
+          <h1>contact</h1>
+          <h1>contact</h1>
+        </div>
       </div>
     </>
   )

@@ -9,6 +9,12 @@ body {
   max-width: var(--max-width);
   margin-left: auto;
   margin-right: auto;
+  &--grid {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 32px;
+    padding: var(--gnb-height) 16px;
+  }
 }
 .contents {
   position: relative;

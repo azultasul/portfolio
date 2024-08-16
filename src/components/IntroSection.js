@@ -1,7 +1,14 @@
+'use client'
+
 import TextShuffle from '@/components/TextShuffle'
 import styles from '@/assets/styles/components/introSection.module.scss'
+import { useEffect } from 'react'
 
 const IntroSection = ({ targetName, array, titleArray }) => {
+  useEffect(() => {
+    window.scrollTo({ top: 0 })
+  }, [])
+
   return (
     <div className={styles.intro}>
       <div className={`${styles.intro__inner} container`}>

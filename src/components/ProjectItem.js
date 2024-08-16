@@ -1,14 +1,15 @@
 'use client'
 
 import Link from 'next/link'
-import styles from '@/assets/styles/components/projectList.module.scss'
 import catData from '@/data/categories'
+import styles from '@/assets/styles/pages/projects.module.scss'
 
 const ProjectItem = ({ item }) => {
   return (
     <Link className={styles.card} href={`/project/${item.id}`}>
       <div>
         <h3 className={styles.card__title}>{item.title}</h3>
+        {item.star && <div>⭐️</div>}
         <div className={styles.card__client}>{item.client}</div>
         <div className={styles.card__date}>
           {item.date} - {item.endDate}
