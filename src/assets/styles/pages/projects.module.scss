@@ -10,7 +10,7 @@
 }
 .title {
   font-size: 16px;
-  margin: 16px 0px 4px;
+  margin: 16px 0px 6px;
 }
 .btn {
   &__num {
@@ -24,7 +24,7 @@
 .list {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: 20px;
 }
 .card {
   display: flex;
@@ -74,12 +74,13 @@
   &__date {
     text-align: right;
     font-family: 'simple';
-    margin-top: 4px;
+    margin-top: 6px;
   }
   &__desc {
     margin-top: 16px;
     text-indent: 16px;
     font-family: 'pretend';
+    line-height: 1.2;
   }
   &__tags {
     justify-content: flex-end;
