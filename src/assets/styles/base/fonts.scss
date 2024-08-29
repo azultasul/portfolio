@@ -14,10 +14,52 @@
 }
 @font-face {
   font-family: 'ohsquare';
-  font-weight: normal;
+  src: url('/fonts/Cafe24Ohsquareair.woff2') format('woff2');
   font-style: normal;
-  font-display: swap;
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Cafe24Ohsquare.woff') format('woff');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'ohsquare';
+  src: url('/fonts/Cafe24Ohsquare.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'pretend';
+  src: url('/fonts/Pretendard-Thin.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 100;
+}
+@font-face {
+  font-family: 'pretend';
+  src: url('/fonts/Pretendard-ExtraLight.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 200;
+}
+@font-face {
+  font-family: 'pretend';
+  src: url('/fonts/Pretendard-Light.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'pretend';
+  src: url('/fonts/Pretendard-Regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'pretend';
+  src: url('/fonts/Pretendard-Medium.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'pretend';
+  src: url('/fonts/Pretendard-Bold.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 700;
 }
 
 // 참고

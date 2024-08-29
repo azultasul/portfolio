@@ -1,7 +1,8 @@
+import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { connectDB } from '@/utils/database'
-import catData from '@/data/categories'
 import styles from '@/assets/styles/pages/detail.module.scss'
+import ProjectSummary from '@/components/ProjectSummary'
 
 const Detail = async ({ params }) => {
   const db = (await connectDB).db('portfolio')
@@ -14,23 +15,7 @@ const Detail = async ({ params }) => {
   return (
     <div className={`container ${styles.container}`}>
       <h1>{result.title}</h1>
-      <div>{result.thumb}</div>
-      <div>{result.date}</div>
-      <div>{result.endDate}</div>
-      <div>
-        {result.tech.map((item, index) => (
-          <span key={index}>{catData.tech[item]}</span>
-        ))}
-      </div>
-      <div>
-        {result.type.map((item, index) => (
-          <span key={index}>{catData.type[item]}</span>
-        ))}
-      </div>
-      <div>{result.client}</div>
-      <div>{result.url}</div>
-      <div>{result.gitUrl}</div>
-      <div>{result.desc}</div>
+      <ProjectSummary result={result} />
       <div>
         {result.learn.map((item, index) => (
           <div key={index}>{item}</div>
@@ -40,8 +25,8 @@ const Detail = async ({ params }) => {
         {result.work.map((item, index) => (
           <div key={index}>
             {item.title && <div>{item.title}</div>}
-            {item.video && <div>{item.video}</div>}
-            {item.image && <div>{item.image}</div>}
+            {item.video && <video src={`/images/projects/${result.id}/${item.video}`} autoPlay muted loop playsInline width="100%"></video>}
+            {item.image && <Image src={`/images/projects/${result.id}/${item.image}`} alt={result.id} width="100" height="100" />}
             {item.number && <div>{item.number}</div>}
             {item.title && <div>{item.title}</div>}
             {item.desc && <div>{item.desc}</div>}

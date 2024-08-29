@@ -9,7 +9,7 @@ const TextShuffle = ({ targetName, className, array }) => {
       textArray: array,
       isAuto: true,
       isReplacedRandomly: true,
-      stayTime: 1500,
+      stayTime: 900,
       replaceTime: 100,
     })
     return () => {

@@ -23,7 +23,7 @@
 // projects list
 .list {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 16px;
 }
 .card {
@@ -37,19 +37,53 @@
   &:hover {
     border: solid 1px var(--point-1);
     transition: all 0.3s;
+    img {
+      transform: scale(1.1);
+    }
+  }
+  &__summary {
+    display: flex;
+    gap: 16px;
+  }
+  &__thumb {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    overflow: hidden;
+    img {
+      transition: all 0.3s;
+    }
+  }
+  &__wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   &__title {
+    margin-top: 8px;
+  }
+  &__star {
+    font-size: 20px;
+    margin-left: 4px;
   }
   &__client {
     text-align: right;
+    font-family: 'simple';
   }
   &__date {
     text-align: right;
+    font-family: 'simple';
+    margin-top: 4px;
   }
   &__desc {
+    margin-top: 16px;
+    text-indent: 16px;
+    font-family: 'pretend';
   }
   &__tags {
     justify-content: flex-end;
+    // margin-top: 16px;
   }
   &__tag {
     // background: var(--point-3);
