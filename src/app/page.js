@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { connectDB } from '@/utils/database'
 import IntroSection from '@/components/IntroSection'
-import ProjectItem from '@/components/ProjectItem'
+import StarItem from '@/components/StarItem'
 import Image from 'next/image'
 import styles from '@/assets/styles/pages/home.module.scss'
 import catData from '@/data/categories'
@@ -25,32 +25,31 @@ const Home = async () => {
       />
       <div className="contents">
         <div className="container container--grid">
-          <div>
-            <section className={styles.section}>
+          <div className="container__left">
+            <div className="container__left-inner">
               <h2 className={styles.title}></h2>
-              <div>
-                에이전시에서 여러 고객사의 요구사항에 맞춘 구축 프로젝트에 참여하며 다양한 기술
-                스택을 경험했습니다.
+              <div>에이전시에서 여러 고객사의 요구사항에 맞춘 구축 프로젝트에 참여하며 다양한 기술 스택을 경험했습니다.</div>
+              <div className="tag-wrap">
+                <button className="btn btn--bg tag">이력서</button>
+                <button className="btn btn--bg tag">경력기술서</button>
+                <button className="btn btn--bg tag">자기소개서</button>
               </div>
-              <button className="btn btn--bg tag">이력서</button>
-              <button className="btn btn--bg tag">경력기술서</button>
-              <button className="btn btn--bg tag">자기소개서</button>
-            </section>
+            </div>
           </div>
           <div>
             <section className={styles.section}>
               <h2 className={styles.title}>기술 스택</h2>
               <div className={`tag-wrap ${styles.section__tags}`}>
                 {Object.values(catData.tech).map((item) => (
-                  <span className={`tag tag--1 ${styles.section__tag}`} key={item.id}>
-                    <Image src={`/images/skills/${item.id}.svg`} width="25" height="25" />
+                  <span className={`tag tag--${item.color} ${styles.section__tag}`} key={item.id}>
+                    <Image src={`/images/skills/${item.id}.svg`} alt="skill" width="25" height="25" />
                     <span>{item.name}</span>
                   </span>
                 ))}
               </div>
             </section>
-            <section className={styles.section}>
-              <div className={styles.test}>
+            <section className={`${styles.section} ${styles.career}`}>
+              <div className={styles.career__title}>
                 <h2 className={styles.title}>
                   경력<span>(3년 9개월)</span>
                 </h2>
@@ -60,25 +59,26 @@ const Home = async () => {
                   </Link>
                 </div>
               </div>
-              <div className={styles.career}>
+              <div className={styles.career__contents}>
                 <div>
                   <h3 className={styles.section__title}>
                     주식회사 엑스와이지원 <br />
-                    <span>(2년 9개월: 2021.07 - 2024.03)</span>
                   </h3>
                   <p>개발실 / 선임</p>
+                  <p className={styles.text}>2년 9개월 (2021.07 - 2024.03)</p>
                   <p className={styles.text}>(주)디파이와 동일한 회사입니다.</p>
                   <h3 className={styles.section__title}>
                     (주)디파이 <br />
-                    <span>(1년: 2020.07 - 2021.07)</span>
                   </h3>
                   <p>개발실 / 주임</p>
+                  <p className={styles.text}>1년 (2020.07 - 2021.07)</p>
+                  <Image className={styles.career__image} src={`/images/projects/dfy21/thumb.jpg`} alt="디파이" width="70" height="70" />
                 </div>
                 <div>
                   {starProjects.length > 0 ? (
                     <div className={styles.career__projects}>
                       {starProjects.map((item, index) => (
-                        <ProjectItem item={item} key={index} />
+                        <StarItem item={item} index={index} key={index} />
                       ))}
                     </div>
                   ) : (
@@ -115,7 +115,7 @@ const Home = async () => {
               {starProjects.length > 0 ? (
                 <div className={styles.contents__projects}>
                   {starProjects.map((item, index) => (
-                    <ProjectItem item={item} key={index} />
+                    <StarItem item={item} key={index} />
                   ))}
                 </div>
               ) : (

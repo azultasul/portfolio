@@ -23,12 +23,12 @@ const ProjectSummary = ({ result }) => {
       <div>{date.endDate}</div>
       <div>
         {result.tech.map((item, index) => (
-          <span key={index}>{catData.tech[item]}</span>
+          <span key={index}>{catData.tech[item].name}</span>
         ))}
       </div>
       <div>
         {result.type.map((item, index) => (
-          <span key={index}>{catData.type[item]}</span>
+          <span key={index}>{catData.type[item].name}</span>
         ))}
       </div>
       <div>{result.client}</div>

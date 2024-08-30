@@ -12,6 +12,15 @@ body {
   max-width: var(--max-width);
   margin-left: auto;
   margin-right: auto;
+  &__left {
+    position: relative;
+    &-inner {
+      position: sticky;
+      top: 55px;
+      left: 0;
+      right: 0;
+    }
+  }
   &--grid {
     display: grid;
     grid-template-columns: 1fr 4fr;

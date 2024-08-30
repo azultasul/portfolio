@@ -12,8 +12,8 @@ const FilterList = ({ projects }) => {
   const [type, setType] = useRecoilState(atomType)
 
   return (
-    <div className={styles.filter}>
-      <div className={styles.filter__inner}>
+    <div className="container__left">
+      <div className="container__left-inner">
         <OrderBtn recoilValue={order} setRecoil={setOrder} />
         <FilterBtn
           catName="tech"
