@@ -11,11 +11,11 @@
   }
   &__text {
     position: absolute;
-    left: 16px;
+    left: var(--base-padding);
     bottom: 15vh;
   }
   h1 {
-    margin-top: 18px;
+    // margin-top: 18px;
   }
   &__scroll {
     position: absolute;

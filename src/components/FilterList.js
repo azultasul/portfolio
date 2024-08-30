@@ -15,8 +15,18 @@ const FilterList = ({ projects }) => {
     <div className={styles.filter}>
       <div className={styles.filter__inner}>
         <OrderBtn recoilValue={order} setRecoil={setOrder} />
-        <FilterBtn catName="tech" recoilValue={tech} setRecoil={setTech} pjArray={projects.map((item) => item.tech)} />
-        <FilterBtn catName="type" recoilValue={type} setRecoil={setType} pjArray={projects.map((item) => item.type)} />
+        <FilterBtn
+          catName="tech"
+          recoilValue={tech}
+          setRecoil={setTech}
+          pjArray={projects.map((item) => item.tech)}
+        />
+        <FilterBtn
+          catName="type"
+          recoilValue={type}
+          setRecoil={setType}
+          pjArray={projects.map((item) => item.type)}
+        />
       </div>
     </div>
   )

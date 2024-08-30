@@ -1,23 +1,65 @@
-.container {
-  h2 {
-    margin: 8px 0px 0px;
-    // text-align: right;
-    &:nth-child(1) {
-      margin: 24px 0px 0px;
+.title {
+  display: inline-block;
+  position: relative;
+  margin: 24px 0px 0px;
+  z-index: 2;
+  span {
+    margin-left: 4px;
+    font-size: 14px;
+    font-family: 'simple';
+    vertical-align: baseline;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    bottom: 4px;
+    right: 0px;
+    transform: skew(-15deg);
+    background: var(--point-3);
+    z-index: 1;
+  }
+}
+.section {
+  border-bottom: 1px solid var(--point-1);
+  padding-bottom: 24px;
+  &__title {
+    margin: 24px 0px 8px;
+    span {
+      margin-left: 4px;
+      font-size: 14px;
+      font-family: 'simple';
+      vertical-align: baseline;
     }
   }
-  h3 {
-    margin: 24px 0px 8px;
-  }
-  hr {
-    margin: 24px 0px 0px;
-    border: 0.5px solid var(--point-1);
+  &:nth-child(1) {
+    padding-top: 0px;
+    h2 {
+      margin-top: 0px;
+    }
   }
 }
-.title {
+.test {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
-.skill {
-  &__title {
-    margin-top: 16px;
+.career {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 32px;
+  &__projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 24px;
   }
+  &__btn {
+    text-align: right;
+    margin-top: 24px;
+  }
+}
+.text {
+  margin-top: 4px;
 }

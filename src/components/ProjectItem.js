@@ -15,7 +15,13 @@ const ProjectItem = ({ item }) => {
         <div className={styles.card__summary}>
           {item.thumb && (
             <div className={styles.card__thumb}>
-              <Image src={`/images/projects/${item.id}/thumb.jpg`} alt={item.id} width="120" height="120" style={{ objectFit: 'cover' }} />
+              <Image
+                src={`/images/projects/${item.id}/thumb.jpg`}
+                alt={item.id}
+                width="120"
+                height="120"
+                style={{ objectFit: 'cover' }}
+              />
             </div>
           )}
           <div className={styles.card__wrap}>
@@ -31,7 +37,7 @@ const ProjectItem = ({ item }) => {
             </div>
           </div>
         </div>
-        <p className={styles.card__desc}>{item.desc}</p>
+        {item.desc && <p className={styles.card__desc}>{item.desc}</p>}
       </div>
       <div className={`tag-wrap ${styles.card__tags}`}>
         {item.tech.map((item, index) => (

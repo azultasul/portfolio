@@ -11,7 +11,14 @@ const ProjectSummary = ({ result }) => {
 
   return (
     <>
-      {result.thumb && <Image src={`/images/projects/${result.id}/thumb.jpeg`} alt={result.id} width="100" height="100" />}
+      {result.thumb && (
+        <Image
+          src={`/images/projects/${result.id}/thumb.jpeg`}
+          alt={result.id}
+          width="100"
+          height="100"
+        />
+      )}
       <div>{date.startDate}</div>
       <div>{date.endDate}</div>
       <div>

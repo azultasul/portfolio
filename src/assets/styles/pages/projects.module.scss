@@ -36,9 +36,10 @@
   border-radius: 16px;
   &:hover {
     border: solid 1px var(--point-1);
-    transition: all 0.3s;
+    box-shadow: 4px 4px 8px var(--point-3);
+    transition: all 0.25s;
     img {
-      transform: scale(1.1);
+      transform: scale(1.15);
     }
   }
   &__summary {
@@ -79,8 +80,6 @@
   &__desc {
     margin-top: 16px;
     text-indent: 16px;
-    font-family: 'pretend';
-    line-height: 1.2;
   }
   &__tags {
     justify-content: flex-end;

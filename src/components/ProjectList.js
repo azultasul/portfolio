@@ -26,8 +26,12 @@ const ProjectList = ({ projects }) => {
 
   useEffect(() => {
     // tech, type 필터링 적용 (필터링 후 날짜 정렬)
-    const arrayByType = projects.filter((item) => type.every((typeItem) => item.type.includes(typeItem)))
-    const arrayByTech = arrayByType.filter((item) => tech.every((techItem) => item.tech.includes(techItem)))
+    const arrayByType = projects.filter((item) =>
+      type.every((typeItem) => item.type.includes(typeItem))
+    )
+    const arrayByTech = arrayByType.filter((item) =>
+      tech.every((techItem) => item.tech.includes(techItem))
+    )
 
     sortByDate(arrayByTech)
     setFilteredData([...arrayByTech])
@@ -44,6 +48,14 @@ const ProjectList = ({ projects }) => {
     // isInit && setFilteredData([...arrayByDate])
   }
 
-  return <div className={styles.list}>{orderedData.length > 0 ? orderedData.map((item, index) => <ProjectItem item={item} key={index} />) : <div>없음~</div>}</div>
+  return orderedData.length > 0 ? (
+    <div className={styles.list}>
+      {orderedData.map((item, index) => (
+        <ProjectItem item={item} key={index} />
+      ))}
+    </div>
+  ) : (
+    <h2 className="nothing">선택한 조건에 맞는 결과가 없습니다 👀</h2>
+  )
 }
 export default ProjectList
