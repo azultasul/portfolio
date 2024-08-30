@@ -34,7 +34,7 @@ const FilterBtn = ({ catName, recoilValue, setRecoil, pjArray }) => {
               key={index}
               onClick={() => setQueryNum(index)}
             >
-              {item}
+              {item.name}
               <sup className={styles.btn__num}>{num}</sup>
             </button>
           ) : null

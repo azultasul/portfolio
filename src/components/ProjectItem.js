@@ -42,7 +42,7 @@ const ProjectItem = ({ item }) => {
       <div className={`tag-wrap ${styles.card__tags}`}>
         {item.tech.map((item, index) => (
           <span className={`tag ${styles.card__tag}`} key={index}>
-            {catData.tech[item]}
+            {catData.tech[item].name}
           </span>
         ))}
       </div>
