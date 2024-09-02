@@ -13,7 +13,7 @@ const StarItem = ({ item, index }) => {
     <div>
       <h3 className={styles.section__title}>
         {index + 1}. {item.title}
-        <br className={styles.section__line} />
+        <br className="show--mo" />
         <span>
           ({item.client} / {date.startDate} - {date.endDate})
         </span>

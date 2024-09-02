@@ -1,3 +1,5 @@
+@import '../base/_mixins';
+
 .intro {
   position: fixed;
   top: 0px;
@@ -12,16 +14,25 @@
   &__text {
     position: absolute;
     left: var(--base-padding);
-    bottom: 15vh;
-  }
-  h1 {
-    // margin-top: 18px;
+    bottom: 10vh;
+
+    @include tablet {
+      & {
+        bottom: 7vh;
+      }
+    }
   }
   &__scroll {
     position: absolute;
     left: 50%;
-    bottom: 7.5vh;
+    bottom: 5.5vh;
     transform: translate(-50%, 20%);
+
+    @include tablet {
+      & {
+        bottom: 4vh;
+      }
+    }
   }
   &__arrow {
     width: 12px;
@@ -32,6 +43,16 @@
     border-radius: 1px;
     animation: wave 1s infinite;
     animation-direction: alternate;
+
+    @include tablet {
+      & {
+        width: 8px;
+        height: 8px;
+        border-right: 1.5px solid var(--text);
+        border-bottom: 1.5px solid var(--text);
+      }
+    }
+
     @for $i from 1 through 3 {
       &:nth-child(#{$i}) {
         animation-delay: 0.1s * $i;
@@ -39,12 +60,24 @@
     }
     &:nth-child(1) {
       transform: translate(0, 6px) rotate(45deg);
+
+      @include tablet {
+        & {
+          transform: translate(0, 4px) rotate(45deg);
+        }
+      }
     }
     &:nth-child(2) {
       transform: rotate(45deg);
     }
     &:nth-child(3) {
       transform: translate(0, -6px) rotate(45deg);
+
+      @include tablet {
+        & {
+          transform: translate(0, -4px) rotate(45deg);
+        }
+      }
     }
   }
 }

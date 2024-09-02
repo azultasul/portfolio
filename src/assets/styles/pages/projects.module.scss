@@ -1,3 +1,5 @@
+@import '../base/_mixins';
+
 // filter list
 .title {
   font-size: 16px;
@@ -16,6 +18,17 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+
+  @include tablet {
+    & {
+      margin-top: 28px;
+    }
+  }
+  @include mobile {
+    & {
+      grid-template-columns: 1fr;
+    }
+  }
 }
 .card {
   display: flex;

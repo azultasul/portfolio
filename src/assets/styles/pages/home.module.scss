@@ -26,12 +26,6 @@
 
 // left
 .about {
-  @include tablet {
-    & {
-      border-bottom: 1px solid var(--point-1);
-      padding-bottom: 28px;
-    }
-  }
   &__top {
     @include tablet {
       & {
@@ -109,15 +103,6 @@
       }
     }
   }
-  &__line {
-    display: none;
-
-    @include mobile {
-      & {
-        display: block;
-      }
-    }
-  }
   &__tags {
     margin-top: 20px;
     gap: 16px;
@@ -161,7 +146,7 @@
     }
   }
   &__image {
-    margin-top: 24px;
+    margin: 24px 0px;
   }
   &__thumb {
     margin-top: 8px;

@@ -52,7 +52,10 @@ const ProjectList = ({ projects }) => {
     </div>
   ) : (
     <div className="nothing">
-      <h2>선택한 조건에 맞는 결과가 없습니다 👀</h2>
+      <h2>
+        선택한 조건에 맞는 <br className="show--mo" />
+        결과가 없습니다 👀
+      </h2>
       <button
         className="btn tag"
         onClick={() => {

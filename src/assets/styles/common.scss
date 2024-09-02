@@ -21,6 +21,12 @@ body {
       top: 55px;
       left: 0;
       right: 0;
+      @include tablet {
+        & {
+          border-bottom: 1px solid var(--point-1);
+          padding-bottom: 28px;
+        }
+      }
     }
   }
   &--grid {
@@ -104,6 +110,7 @@ h1 {
   @include tablet {
     & {
       font-size: 48px;
+      word-break: keep-all;
     }
   }
 }
@@ -224,5 +231,16 @@ h3 {
   &.active {
     background: var(--point-1);
     color: var(--background);
+  }
+}
+.show {
+  &--mo {
+    display: none;
+
+    @include mobile {
+      & {
+        display: block;
+      }
+    }
   }
 }
