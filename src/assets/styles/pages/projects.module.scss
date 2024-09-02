@@ -36,11 +36,11 @@
   justify-content: space-between;
   gap: 16px;
   padding: 16px;
-  border: solid 1px var(--point-3);
+  border: solid 1px var(--point-2);
   border-radius: 16px;
   &:hover {
     border: solid 1px var(--point-1);
-    box-shadow: 4px 4px 8px var(--point-3);
+    box-shadow: 4px 4px 8px var(--point-2);
     transition: all 0.25s;
     img {
       transform: scale(1.15);
@@ -90,7 +90,7 @@
     // margin-top: 16px;
   }
   &__tag {
-    // background: var(--point-3);
+    // background: var(--point-2);
     // color: var(--text);
   }
 }

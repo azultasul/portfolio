@@ -1,0 +1,35 @@
+@import '../base/_mixins';
+
+.about {
+  @include tablet {
+    & {
+      display: flex;
+      gap: 20px;
+    }
+  }
+}
+.tags {
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+    font-family: 'simple';
+    font-weight: 900;
+
+    @include tablet {
+      & {
+        gap: 6px;
+        margin-top: 6px;
+      }
+    }
+    img {
+      @include tablet {
+        & {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+}

@@ -173,9 +173,6 @@ h3 {
   &--2 {
     background: var(--point-2);
   }
-  &--3 {
-    background: var(--point-3);
-  }
 }
 
 .btn {
@@ -188,10 +185,10 @@ h3 {
   font-size: 14px;
   font-weight: 900;
   &:hover {
-    background: var(--point-3);
+    background: var(--point-2);
   }
   &--bg {
-    background: var(--point-3);
+    background: var(--point-2);
     &:hover {
       background: var(--point-1);
       color: var(--background);
@@ -201,7 +198,7 @@ h3 {
     background: var(--point-1);
     color: var(--background);
     &:hover {
-      background: var(--point-3);
+      background: var(--point-2);
       color: var(--text);
     }
   }
