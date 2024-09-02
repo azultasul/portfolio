@@ -8,6 +8,9 @@ import '@/assets/styles/common.scss'
 export const metadata = {
   title: 'Portfolio',
   description: "Dasol's portfolio",
+  icons: {
+    icon: '/favicon.ico',
+  },
 }
 
 const RootLayout = ({ children }) => {

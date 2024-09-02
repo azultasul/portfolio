@@ -7,7 +7,7 @@
   --background: #e5e5e5;
   --background-1: #d6d8dd;
   --text: #020002;
-  --point-1: #1d36a6;
+  --point-1: #1846c6;
   --point-2: #5e80b6;
   --point-3: #acbdd3;
 }
@@ -16,9 +16,12 @@ html.dark {
   --background: #0d2138;
   --background-1: #010406;
   --text: #f8f4e9;
-  --point-1: #f6dc55;
+  --point-1: #ff6600;
   --point-2: #f6e691;
   --point-3: #e9e586;
 }
 
 /* #348AE8 */
+/* #1846C6 */
+/* #1d36a6 */
+/* #FF6600 */

@@ -37,6 +37,7 @@ const Home = async () => {
                     <span className="tag">Frontend 개발자</span>
                     <span className="tag">React</span>
                     <span className="tag">Vue</span>
+                    <span className="tag">인터랙션</span>
                     <span className="tag">도전 정신</span>
                     <span className="tag">문제 해결</span>
                     <span className="tag">커뮤니케이션</span>
