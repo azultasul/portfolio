@@ -1,6 +1,6 @@
 'use client'
 
-import { useRecoilValue } from 'recoil'
+import { useRecoilValue, useRecoilState } from 'recoil'
 import { useEffect, useState } from 'react'
 import { atomOrder, atomTech, atomType } from '@/utils/recoil'
 import ProjectItem from '@/components/ProjectItem'
@@ -8,8 +8,8 @@ import styles from '@/assets/styles/pages/projects.module.scss'
 
 const ProjectList = ({ projects }) => {
   const order = useRecoilValue(atomOrder)
-  const tech = useRecoilValue(atomTech)
-  const type = useRecoilValue(atomType)
+  const [tech, setTech] = useRecoilState(atomTech)
+  const [type, setType] = useRecoilState(atomType)
 
   const [filteredData, setFilteredData] = useState([])
   const [orderedData, setOrderedData] = useState([])
@@ -26,12 +26,8 @@ const ProjectList = ({ projects }) => {
 
   useEffect(() => {
     // tech, type 필터링 적용 (필터링 후 날짜 정렬)
-    const arrayByType = projects.filter((item) =>
-      type.every((typeItem) => item.type.includes(typeItem))
-    )
-    const arrayByTech = arrayByType.filter((item) =>
-      tech.every((techItem) => item.tech.includes(techItem))
-    )
+    const arrayByType = projects.filter((item) => type.every((typeItem) => item.type.includes(typeItem)))
+    const arrayByTech = arrayByType.filter((item) => tech.every((techItem) => item.tech.includes(techItem)))
 
     sortByDate(arrayByTech)
     setFilteredData([...arrayByTech])
@@ -55,7 +51,18 @@ const ProjectList = ({ projects }) => {
       ))}
     </div>
   ) : (
-    <h2 className="nothing">선택한 조건에 맞는 결과가 없습니다 👀</h2>
+    <div className="nothing">
+      <h2>선택한 조건에 맞는 결과가 없습니다 👀</h2>
+      <button
+        className="btn tag"
+        onClick={() => {
+          setTech([])
+          setType([])
+        }}
+      >
+        전체 프로젝트 보기
+      </button>
+    </div>
   )
 }
 export default ProjectList

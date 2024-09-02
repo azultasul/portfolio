@@ -26,13 +26,31 @@ const Home = async () => {
       <div className="contents">
         <div className="container container--grid">
           <div className="container__left">
-            <div className="container__left-inner">
-              <h2 className={styles.title}></h2>
-              <div>에이전시에서 여러 고객사의 요구사항에 맞춘 구축 프로젝트에 참여하며 다양한 기술 스택을 경험했습니다.</div>
-              <div className="tag-wrap">
-                <button className="btn btn--bg tag">이력서</button>
-                <button className="btn btn--bg tag">경력기술서</button>
-                <button className="btn btn--bg tag">자기소개서</button>
+            <div className={`container__left-inner ${styles.about}`}>
+              <div className={styles.about__top}>
+                <Image src={`/images/dasol.jpg`} alt="skill" width="93" height="119" />
+                <div className={styles.about__contents}>
+                  <h3 className={styles.about__name}>
+                    유다솔<span>(1994.05.20)</span>
+                  </h3>
+                  <div className={`tag-wrap ${styles.about__tags}`}>
+                    <span className="tag">Frontend 개발자</span>
+                    <span className="tag">React</span>
+                    <span className="tag">Vue</span>
+                    <span className="tag">도전 정신</span>
+                    <span className="tag">문제 해결</span>
+                    <span className="tag">커뮤니케이션</span>
+                  </div>
+                  {/* <p>• 에이전시에서 여러 고객사의 요구사항에 맞춘 구축 프로젝트에 참여하며 다양한 기술 스택을 경험했습니다.</p>
+                  <p>
+                    • 여러 기술 스택을 경험하며 도전 정신과 문제 해결 능력을 키웠고, 두 번의 프로젝트 리더 경험을 통해 커뮤니케이션 능력을 발전시켰습니다.
+                  </p> */}
+                </div>
+              </div>
+              <div className={styles.about__bottom}>
+                <button className="btn btn--line">이력서 보기</button>
+                <button className="btn btn--line">경력기술서 보기</button>
+                <button className="btn btn--line">자기소개서 보기</button>
               </div>
             </div>
           </div>
@@ -41,8 +59,9 @@ const Home = async () => {
               <h2 className={styles.title}>기술 스택</h2>
               <div className={`tag-wrap ${styles.section__tags}`}>
                 {Object.values(catData.tech).map((item) => (
-                  <span className={`tag tag--${item.color} ${styles.section__tag}`} key={item.id}>
-                    <Image src={`/images/skills/${item.id}.svg`} alt="skill" width="25" height="25" />
+                  <span className={`${styles.section__tag}`} key={item.id}>
+                    {/* <span className={`tag tag--${item.color} ${styles.section__tag}`} key={item.id}> */}
+                    <Image src={`/images/skills/${item.id}.svg`} alt="skill" width="35" height="35" />
                     <span>{item.name}</span>
                   </span>
                 ))}

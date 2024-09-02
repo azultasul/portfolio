@@ -1,7 +1,8 @@
 :root {
   --max-width: 1440px;
   --base-padding: 20px;
-  --gnb-height: 50px;
+  --gnb-height: 54px;
+  --gnb-height-mini: 44px;
   /* color */
   --background: #e5e5e5;
   --background-1: #d6d8dd;

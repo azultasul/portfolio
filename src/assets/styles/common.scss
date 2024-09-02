@@ -1,3 +1,5 @@
+@import 'base/_mixins';
+
 body {
   background: var(--background);
   color: var(--text);
@@ -26,6 +28,13 @@ body {
     grid-template-columns: 1fr 4fr;
     gap: 32px;
     padding: var(--gnb-height) var(--base-padding);
+
+    @include tablet {
+      & {
+        display: block;
+        padding: var(--gnb-height-mini) var(--base-padding);
+      }
+    }
   }
 }
 .contents {
@@ -49,11 +58,33 @@ body {
     font-size: 18px;
     font-family: 'ohsquare';
     font-weight: 700;
+
+    @include desktop {
+      & {
+        background-color: green;
+      }
+    }
+    @include tablet {
+      & {
+        background-color: blue;
+        font-size: 16px;
+      }
+    }
+    @include mobile {
+      & {
+        background-color: red;
+      }
+    }
   }
   a,
   button {
     padding: 8px 0px;
     cursor: pointer;
+    @include tablet {
+      & {
+        padding: 4px 0px;
+      }
+    }
   }
   &__sub {
     display: flex;
@@ -69,17 +100,35 @@ h1 {
   font-size: 64px;
   font-family: 'ohsquare';
   font-weight: 700;
+
+  @include tablet {
+    & {
+      font-size: 48px;
+    }
+  }
 }
 h2 {
   font-size: 32px;
   font-family: 'ohsquare';
   font-weight: 700;
+
+  @include tablet {
+    & {
+      font-size: 24px;
+    }
+  }
 }
 h3 {
   // margin-bottom: 8px;
   font-size: 24px;
   font-family: 'ohsquare';
   font-weight: 700;
+
+  @include tablet {
+    & {
+      font-size: 18px;
+    }
+  }
 }
 
 // items
@@ -87,10 +136,13 @@ h3 {
   text-align: center;
   padding: 72px 0px;
   font-style: italic;
+  .btn {
+    margin-top: 16px;
+  }
 }
 
 .tag {
-  padding: 4px 8px;
+  padding: 4px 6px;
   font-family: 'simple';
   font-size: 14px;
   font-weight: 900;
@@ -121,10 +173,13 @@ h3 {
 
 .btn {
   display: inline-block;
-  text-transform: uppercase;
   background: transparent;
   color: var(--text);
   transition: all 0.2s;
+  text-transform: uppercase;
+  font-family: 'simple';
+  font-size: 14px;
+  font-weight: 900;
   &:hover {
     background: var(--point-3);
   }
@@ -141,6 +196,29 @@ h3 {
     &:hover {
       background: var(--point-3);
       color: var(--text);
+    }
+  }
+  &--line {
+    position: relative;
+    z-index: 2;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 1.5px;
+      bottom: 0px;
+      right: 0px;
+      left: 0px;
+      background: var(--point-1);
+      z-index: -1;
+      transition: width 0.3s;
+      transform-origin: right;
+    }
+    &:hover {
+      background-color: transparent;
+      &::after {
+        width: 100%;
+      }
     }
   }
   &.active {

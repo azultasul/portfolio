@@ -13,6 +13,7 @@ const StarItem = ({ item, index }) => {
     <div>
       <h3 className={styles.section__title}>
         {index + 1}. {item.title}
+        <br className={styles.section__line} />
         <span>
           ({item.client} / {date.startDate} - {date.endDate})
         </span>
@@ -44,7 +45,7 @@ const StarItem = ({ item, index }) => {
 
       <div className={styles.career__tags}>
         {/* <div className={`tag-wrap`}> */}
-        <Link className="tag btn" href={`/project/${item.id}`}>
+        <Link className="btn btn--line" href={`/project/${item.id}`}>
           자세히 보기
         </Link>
         {/* {item.tech.map((item, index) => (
