@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { connectDB } from '@/utils/database'
 import IntroSection from '@/components/IntroSection'
 import StarItem from '@/components/StarItem'
+import NavigateBtn from '@/components/NavigateBtn'
 import Image from 'next/image'
 import styles from '@/assets/styles/pages/home.module.scss'
 import catData from '@/data/categories'
@@ -10,7 +11,7 @@ const Home = async () => {
   const db = (await connectDB).db('portfolio')
   let projects = await db
     .collection('projects')
-    .find({ star: true })
+    .find({ star: true, type: [1] })
     .project({ id: 1, title: 1, star: 1, thumb: 1, date: 1, endDate: 1, client: 1, tech: 1 })
     .sort({ date: -1 })
     .toArray()
@@ -74,9 +75,9 @@ const Home = async () => {
                   경력<span>(3년 9개월)</span>
                 </h2>
                 <div className={styles.career__btn}>
-                  <Link href="/project" scroll={false} className="btn btn--bg tag">
-                    전체 프로젝트 보기
-                  </Link>
+                  <NavigateBtn className="btn btn--bg tag" catName="type" catNum={1}>
+                    디파이 프로젝트 보기
+                  </NavigateBtn>
                 </div>
               </div>
               <div className={styles.career__contents}>

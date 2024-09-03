@@ -5,7 +5,7 @@ import ProjectList from '@/components/ProjectList'
 
 const Project = async () => {
   const db = (await connectDB).db('portfolio')
-  let projects = await db.collection('projects').find().toArray()
+  let projects = await db.collection('projects').find({ display: true }).toArray()
   // console.log('heads', projects)
 
   return (

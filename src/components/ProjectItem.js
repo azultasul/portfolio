@@ -15,13 +15,7 @@ const ProjectItem = ({ item }) => {
         <div className={styles.card__summary}>
           {item.thumb && (
             <div className={styles.card__thumb}>
-              <Image
-                src={`/images/projects/${item.id}/thumb.jpg`}
-                alt={item.id}
-                width="120"
-                height="120"
-                style={{ objectFit: 'cover' }}
-              />
+              <Image src={`/images/projects/${item.id}/${item.thumb}`} alt={item.id} width="120" height="120" style={{ objectFit: 'cover' }} />
             </div>
           )}
           <div className={styles.card__wrap}>

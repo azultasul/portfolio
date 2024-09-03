@@ -61,9 +61,6 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 8px var(--base-padding);
-    font-size: 18px;
-    font-family: 'ohsquare';
-    font-weight: 700;
 
     @include desktop {
       & {
@@ -85,6 +82,9 @@ body {
   a,
   button {
     padding: 8px 0px;
+    font-size: 18px;
+    font-family: 'ohsquare';
+    font-weight: 700;
     cursor: pointer;
     @include tablet {
       & {
@@ -180,7 +180,7 @@ h3 {
   background: transparent;
   color: var(--text);
   transition: all 0.2s;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   font-family: 'simple';
   font-size: 14px;
   font-weight: 900;

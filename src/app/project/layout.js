@@ -1,7 +1,5 @@
-import RecoilProjectProvider from '@/components/RecoilProjectProvider'
-
 const ProjectLayout = ({ children }) => {
-  return <RecoilProjectProvider>{children}</RecoilProjectProvider>
+  return <div>{children}</div>
 }
 
 export default ProjectLayout

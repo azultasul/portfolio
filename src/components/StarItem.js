@@ -55,7 +55,7 @@ const StarItem = ({ item, index }) => {
           ))} */}
         {item.thumb && (
           <div className={styles.career__thumb}>
-            <Image src={`/images/projects/${item.id}/thumb.jpg`} alt={item.id} width="50" height="50" style={{ objectFit: 'cover' }} />
+            <Image src={`/images/projects/${item.id}/${item.thumb}`} alt={item.id} width="50" height="50" style={{ objectFit: 'cover' }} />
           </div>
         )}
         {/* </div> */}
