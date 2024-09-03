@@ -4,31 +4,49 @@ import Link from 'next/link'
 import Image from 'next/image'
 import useDate from '@/utils/useDate'
 import catData from '@/data/categories'
-import styles from '@/assets/styles/pages/projects.module.scss'
+import styles from '@/assets/styles/pages/detail.module.scss'
+import NavigateBtn from '@/components/NavigateBtn'
 
-const ProjectSummary = ({ result }) => {
-  const date = useDate(result.date, result.endDate)
+const ProjectSummary = ({ project }) => {
+  const date = useDate(project.date, project.endDate)
 
   return (
-    <>
-      {result.thumb && <Image src={`/images/projects/${result.id}/${result.thumb}`} alt={result.id} width="100" height="100" />}
-      <div>{date.startDate}</div>
-      <div>{date.endDate}</div>
-      <div>
-        {result.tech.map((item, index) => (
-          <span key={index}>{catData.tech[item].name}</span>
-        ))}
+    <div className={styles.summary}>
+      <div className={styles.summary__section}>
+        {project.thumb && (
+          <div className={styles.summary__img}>
+            <Image src={`/images/projects/${project.id}/${project.thumb}`} alt={project.id} width="240" height="180" priority />
+          </div>
+        )}
+        <div>
+          <p className={styles.summary__info}>{project.client}</p>
+          <p className={styles.summary__info}>
+            <span>{date.startDate}</span>
+            {project.endDate && (
+              <span>
+                &nbsp;-&nbsp;{date.endDate} ({date.duration}개월)
+              </span>
+            )}
+          </p>
+          <p className={styles.summary__desc}>{project.desc}</p>
+          <div className="tag-wrap">
+            {project.tech.map((item, index) => (
+              <NavigateBtn className={`btn btn--bg tag ${styles.summary__btn}`} catName="tech" catNum={item} key={index}>
+                {catData.tech[item].name}
+              </NavigateBtn>
+            ))}
+          </div>
+        </div>
       </div>
-      <div>
-        {result.type.map((item, index) => (
-          <span key={index}>{catData.type[item].name}</span>
-        ))}
+
+      <div className={styles.summary__url}>
+        {project.url && (
+          <a className={`btn btn--line ${styles.summary__btn}`} href={project.url} target="_blank">
+            사이트 보기
+          </a>
+        )}
       </div>
-      <div>{result.client}</div>
-      <div>{result.url}</div>
-      <div>{result.gitUrl}</div>
-      <div>{result.desc}</div>
-    </>
+    </div>
   )
 }
 export default ProjectSummary
