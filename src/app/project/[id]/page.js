@@ -34,16 +34,24 @@ const Detail = async ({ params }) => {
             </div>
           ))}
       </div>
-      <div>
+
+      <div className={styles.work}>
         {project.work &&
           project.work.map((item, index) => (
-            <div key={index}>
-              {item.title && <div>{item.title}</div>}
-              {item.video && <video src={`/images/projects/${project.id}/${item.video}`} autoPlay muted loop playsInline width="100%"></video>}
-              {item.image && <Image src={`/images/projects/${project.id}/${item.image}`} alt={project.id} width="100" height="100" />}
-              {item.number && <div>{item.number}</div>}
-              {item.title && <div>{item.title}</div>}
-              {item.desc && <div>{item.desc}</div>}
+            <div className={styles.work__cont} key={index}>
+              <div className={styles.work__text}>
+                {item.title && (
+                  <h3>
+                    {item.number && <span>{item.number}</span>}
+                    &nbsp;{item.title}
+                  </h3>
+                )}
+                {item.desc && <div>{item.desc}</div>}
+              </div>
+              <div className={styles.work__media}>
+                {item.video && <video src={`/images/projects/${project.id}/${item.video}`} autoPlay muted loop playsInline width="720"></video>}
+                {item.image && <Image src={`/images/projects/${project.id}/${item.image}`} alt={project.id} width="720" height="300" />}
+              </div>
             </div>
           ))}
       </div>
