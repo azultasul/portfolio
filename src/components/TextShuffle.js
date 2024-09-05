@@ -15,7 +15,7 @@ const TextShuffle = ({ targetName, className, array }) => {
     return () => {
       shuffle.clear()
     }
-  }, [])
+  }, [array, targetName])
 
   return <div className={`${className} ${targetName}`}></div>
 }

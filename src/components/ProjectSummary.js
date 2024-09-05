@@ -1,6 +1,5 @@
 'use client'
 
-import Link from 'next/link'
 import Image from 'next/image'
 import useDate from '@/utils/useDate'
 import catData from '@/data/categories'

@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { connectDB } from '@/utils/database'
 import IntroSection from '@/components/IntroSection'
 import StarItem from '@/components/StarItem'

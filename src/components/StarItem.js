@@ -3,7 +3,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import useDate from '@/utils/useDate'
-import catData from '@/data/categories'
 import styles from '@/assets/styles/pages/home.module.scss'
 
 const StarItem = ({ item, index }) => {

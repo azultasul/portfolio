@@ -17,12 +17,12 @@ const ProjectList = ({ projects }) => {
   useEffect(() => {
     // 초기 projects 데이터 불러온 후
     sortByDate([...projects], true)
-  }, [])
+  }, [projects])
 
   useEffect(() => {
     // 날짜 정렬
     sortByDate(filteredData)
-  }, [order])
+  }, [order, filteredData])
 
   useEffect(() => {
     // tech, type 필터링 적용 (필터링 후 날짜 정렬)
@@ -31,7 +31,7 @@ const ProjectList = ({ projects }) => {
 
     sortByDate(arrayByTech)
     setFilteredData([...arrayByTech])
-  }, [tech, type])
+  }, [projects, tech, type])
 
   const sortByDate = (array) => {
     // 날짜 정렬 (초기에만 projects 추가)

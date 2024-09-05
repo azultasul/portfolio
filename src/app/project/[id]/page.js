@@ -2,8 +2,6 @@ import { notFound } from 'next/navigation'
 import { connectDB } from '@/utils/database'
 import Image from 'next/image'
 import ProjectSummary from '@/components/ProjectSummary'
-import NavigateBtn from '@/components/NavigateBtn'
-import catData from '@/data/categories'
 import styles from '@/assets/styles/pages/detail.module.scss'
 
 const Detail = async ({ params }) => {
