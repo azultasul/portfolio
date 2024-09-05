@@ -47,7 +47,7 @@
         margin-top: 20px;
       }
     }
-    button {
+    a {
       padding-top: 6px;
       padding-bottom: 2px;
       margin-top: 4px;
@@ -76,6 +76,11 @@
   }
   &__tags {
     margin-top: 4px;
+  }
+  &__btn {
+    display: flex;
+    gap: 4px;
+    align-items: center;
   }
 }
 
@@ -147,6 +152,12 @@
   }
   &__image {
     margin: 24px 0px;
+  }
+  &__learn {
+    margin-top: 8px;
+  }
+  &__desc {
+    font-weight: 300;
   }
   &__thumb {
     margin-top: 8px;

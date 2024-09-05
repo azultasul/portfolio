@@ -27,9 +27,9 @@ const RootLayout = ({ children }) => {
               </Link>
               <div className="gnb__sub">
                 <NavigateBtn>프로젝트</NavigateBtn>
-                <Link href="/contact" scroll={false}>
+                {/* <Link href="/contact" scroll={false}>
                   컨택미
-                </Link>
+                </Link> */}
                 <DarkModeBtn className="gnb__dark" />
               </div>
             </div>

@@ -11,7 +11,7 @@ const Home = async () => {
   let projects = await db
     .collection('projects')
     .find({ star: true, type: [1] })
-    .project({ id: 1, title: 1, star: 1, thumb: 1, date: 1, endDate: 1, client: 1, tech: 1 })
+    .project({ id: 1, title: 1, star: 1, thumb: 1, date: 1, endDate: 1, client: 1, learn: 1 })
     .sort({ date: -1 })
     .toArray()
   let starProjects = JSON.parse(JSON.stringify(projects))
@@ -49,9 +49,13 @@ const Home = async () => {
                 </div>
               </div>
               <div className={styles.about__bottom}>
-                <button className="btn btn--line">이력서 보기</button>
-                <button className="btn btn--line">경력기술서 보기</button>
-                <button className="btn btn--line">자기소개서 보기</button>
+                {/* <a className="btn btn--line" href="/유다솔.pdf">
+                  경력기술서 보기
+                </a> */}
+                <a className={`${styles.about__btn}`} href="mailto:dasolyou@gmail.com">
+                  <Image src={`/images/skills/gmail.svg`} alt="gmail" width="20" height="20" />
+                  <span className="btn btn--line">dasolyou@gmail.com</span>
+                </a>
               </div>
             </div>
           </div>
@@ -68,6 +72,7 @@ const Home = async () => {
                 ))}
               </div>
             </section>
+
             <section className={`${styles.section} ${styles.career}`}>
               <div className={styles.career__title}>
                 <h2 className={styles.title}>
@@ -94,19 +99,18 @@ const Home = async () => {
                   <p className={styles.text}>1년 (2020.07 - 2021.07)</p>
                   <Image className={styles.career__image} src={`/images/projects/dfy21/thumb.jpg`} alt="디파이" width="70" height="70" />
                 </div>
-                <div>
-                  {starProjects.length > 0 ? (
-                    <div className={styles.career__projects}>
-                      {starProjects.map((item, index) => (
-                        <StarItem item={item} index={index} key={index} />
-                      ))}
-                    </div>
-                  ) : (
-                    <h2 className="nothing">프로젝트를 가져오는 중입니다 🙏🏼</h2>
-                  )}
-                </div>
+                {starProjects.length > 0 ? (
+                  <div>
+                    {starProjects.map((item, index) => (
+                      <StarItem item={item} index={index} key={index} />
+                    ))}
+                  </div>
+                ) : (
+                  <h2 className="nothing">프로젝트를 가져오는 중입니다 🙏🏼</h2>
+                )}
               </div>
             </section>
+
             <section className={styles.section}>
               <h2 className={styles.title}>학력</h2>
               <h3 className={styles.section__title}>
@@ -115,6 +119,7 @@ const Home = async () => {
               <p>주전공: 물리학과 / 복수전공: 전자공학과</p>
               <p className={styles.text}>학점: 3.52 / 4.5</p>
             </section>
+
             <section className={styles.section}>
               <h2 className={styles.title}>자격증/어학</h2>
               <h3 className={styles.section__title}>정보처리기사</h3>
