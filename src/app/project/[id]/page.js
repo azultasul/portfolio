@@ -17,8 +17,6 @@ const Detail = async ({ params }) => {
     <div className={`container ${styles.container}`}>
       <h1 className={styles.title}>{project.title}</h1>
       <ProjectSummary project={project} />
-      {/* <Suspense fallback={<div>Loading...</div>}>
-      </Suspense> */}
 
       <hr className={styles.line} />
 

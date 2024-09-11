@@ -195,11 +195,23 @@
     height: 76px;
     border-radius: 2px;
     margin: 0px auto;
+    @include mobile {
+      & {
+        width: 200px;
+        height: 43.2px;
+      }
+    }
   }
   &__img {
     width: 240px;
     height: 180px;
     border-radius: 2px;
+    @include mobile {
+      & {
+        width: 110px;
+        height: 82.5px;
+      }
+    }
   }
   &__info {
     flex: 1;
@@ -209,12 +221,25 @@
     height: 21px;
     margin: 0px 0px 0px auto;
     border-radius: 2px;
+
+    @include mobile {
+      & {
+        width: 60px;
+        height: 19px;
+      }
+    }
   }
   &__date {
     width: 200px;
     height: 21px;
     margin: 2px 0px 0px auto;
     border-radius: 2px;
+    @include mobile {
+      & {
+        width: 190px;
+        height: 19px;
+      }
+    }
   }
   &__desc {
     width: 100%;
@@ -224,6 +249,11 @@
       width: 70%;
       margin-top: 2px;
     }
+    @include mobile {
+      & {
+        height: 19px;
+      }
+    }
   }
   &__tag {
     width: 50px;
@@ -231,12 +261,23 @@
     &:hover {
       background-color: var(--point-2);
     }
+    @include mobile {
+      & {
+        height: 22px;
+      }
+    }
   }
   &__url {
     width: 80px;
     height: 19.2px;
     border-radius: 2px;
     margin: 12px 0px 0px auto;
+    @include mobile {
+      & {
+        width: 72px;
+        height: 19px;
+      }
+    }
   }
   &__subtit {
     width: 122.38px;
@@ -244,6 +285,11 @@
     border-radius: 2px;
     &::before {
       height: 0px;
+    }
+    @include mobile {
+      & {
+        height: 28px;
+      }
     }
   }
   &__cont {
@@ -253,41 +299,32 @@
     display: inline-block;
     width: 90%;
     height: 21.5px;
-    max-width: 700px;
+    max-width: 800px;
     border-radius: 2px;
+    @include mobile {
+      & {
+        height: 19px;
+      }
+    }
   }
 }
 
 .skeleton {
   position: relative;
   overflow: hidden;
-  background-color: var(--point-2);
-
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: var(--background);
-    animation: loading 2s infinite;
-  }
-}
-@keyframes shimmer {
-  100% {
-    transform: translate(100%, 100%);
-  }
+  background-color: var(--point-1);
+  opacity: 0.5;
+  animation: loading 2s infinite;
 }
 
 @keyframes loading {
   0% {
-    opacity: 0;
+    opacity: 0.6;
   }
   50% {
-    opacity: 0.8;
+    opacity: 0.2;
   }
   100% {
-    opacity: 0;
+    opacity: 0.6;
   }
 }
