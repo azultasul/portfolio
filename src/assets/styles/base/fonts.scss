@@ -1,20 +1,22 @@
 @font-face {
   font-family: 'simple';
-  font-weight: 900;
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Simplehae.woff') format('woff');
   font-style: normal;
   font-display: swap;
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Simplehae.woff') format('woff');
+  font-weight: 900;
 }
 @font-face {
   font-family: 'ohsquare';
   src: url('/fonts/Cafe24Ohsquareair.woff2') format('woff2');
   font-style: normal;
+  font-display: swap;
   font-weight: 400;
 }
 @font-face {
   font-family: 'ohsquare';
   src: url('/fonts/Cafe24Ohsquare.woff2') format('woff2');
   font-style: normal;
+  font-display: swap;
   font-weight: 700;
 }
 

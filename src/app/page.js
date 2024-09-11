@@ -97,7 +97,9 @@ const Home = async () => {
                   </h3>
                   <p>개발실 / 주임</p>
                   <p className={styles.text}>1년 (2020.07 - 2021.07)</p>
-                  <Image className={styles.career__image} src={`/images/projects/dfy21/thumb.jpg`} alt="디파이" width="70" height="70" />
+                  <a className={styles.career__image} href="https://www.dfy.co.kr/" target="_blank">
+                    <Image src={`/images/projects/dfy21/thumb.jpg`} alt="디파이" width="70" height="70" />
+                  </a>
                 </div>
                 {starProjects.length > 0 ? (
                   <div>
