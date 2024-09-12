@@ -14,13 +14,15 @@
   &__text {
     position: absolute;
     left: var(--base-padding);
-    bottom: 10vh;
+    // bottom: 10vh;
+    bottom: 50%;
+    transform: translateY(50%);
 
-    @include tablet {
-      & {
-        bottom: 7vh;
-      }
-    }
+    // @include tablet {
+    //   & {
+    //     bottom: 7vh;
+    //   }
+    // }
   }
   &__scroll {
     position: absolute;
