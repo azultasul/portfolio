@@ -64,12 +64,15 @@ const Home = async () => {
             <section className={styles.section}>
               <h2 className={styles.title}>기술 스택</h2>
               <div className={`tag-wrap ${styles.section__tags}`}>
-                {Object.values(catData.tech).map((item) => (
-                  <span className={`${styles.section__tag}`} key={item.id}>
-                    <Image src={`/images/skills/${item.id}.svg`} alt="skill" width="35" height="35" />
-                    <span>{item.name}</span>
-                  </span>
-                ))}
+                {Object.values(catData.tech).map(
+                  (item) =>
+                    item.show && (
+                      <span className={`${styles.section__tag}`} key={item.id}>
+                        <Image src={`/images/skills/${item.id}.svg`} alt="skill" width="35" height="35" />
+                        <span>{item.name}</span>
+                      </span>
+                    )
+                )}
               </div>
             </section>
 
