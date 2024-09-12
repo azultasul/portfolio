@@ -49,12 +49,13 @@ const Home = async () => {
                 </div>
               </div>
               <div className={styles.about__bottom}>
-                {/* <a className="btn btn--line" href="/유다솔.pdf">
-                  경력기술서 보기
-                </a> */}
-                <a className={`${styles.about__btn}`} href="mailto:dasolyou@gmail.com">
-                  <Image src={`/images/skills/gmail.svg`} alt="gmail" width="20" height="20" />
+                <a className={styles.about__btn} href="mailto:dasolyou@gmail.com">
+                  <Image src={`/images/icons/gmail.svg`} alt="gmail" width="20" height="20" />
                   <span className="btn btn--line">dasolyou@gmail.com</span>
+                </a>
+                <a className={styles.about__btn} href="/유다솔.pdf">
+                  <Image src={`/images/icons/download.svg`} alt="download" width="20" height="20" />
+                  <span className="btn btn--line">이력서 보기</span>
                 </a>
               </div>
             </div>
@@ -65,7 +66,6 @@ const Home = async () => {
               <div className={`tag-wrap ${styles.section__tags}`}>
                 {Object.values(catData.tech).map((item) => (
                   <span className={`${styles.section__tag}`} key={item.id}>
-                    {/* <span className={`tag tag--${item.color} ${styles.section__tag}`} key={item.id}> */}
                     <Image src={`/images/skills/${item.id}.svg`} alt="skill" width="35" height="35" />
                     <span>{item.name}</span>
                   </span>

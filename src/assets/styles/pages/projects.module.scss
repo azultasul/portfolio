@@ -74,11 +74,11 @@
   }
   &__client {
     text-align: right;
-    font-family: 'simple';
+    font-family: var(--font-simple);
   }
   &__date {
     text-align: right;
-    font-family: 'simple';
+    font-family: var(--font-simple);
     margin-top: 6px;
   }
   &__desc {

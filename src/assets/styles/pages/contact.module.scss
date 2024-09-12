@@ -14,7 +14,7 @@
     align-items: center;
     gap: 8px;
     margin-top: 8px;
-    font-family: 'simple';
+    font-family: var(--font-simple);
     font-weight: 900;
 
     @include tablet {

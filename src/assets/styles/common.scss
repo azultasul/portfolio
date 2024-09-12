@@ -4,7 +4,7 @@ body {
   background: var(--background);
   color: var(--text);
 
-  font-family: 'pretend';
+  font-family: var(--font-pretend);
   line-height: 1.2;
 }
 
@@ -83,7 +83,7 @@ body {
   button {
     padding: 8px 0px;
     font-size: 18px;
-    font-family: 'ohsquare';
+    font-family: var(--font-ohsquare);
     font-weight: 700;
     cursor: pointer;
     @include tablet {
@@ -104,7 +104,7 @@ body {
 // title
 h1 {
   font-size: 64px;
-  font-family: 'ohsquare';
+  font-family: var(--font-ohsquare);
   font-weight: 700;
 
   @include tablet {
@@ -116,7 +116,7 @@ h1 {
 }
 h2 {
   font-size: 32px;
-  font-family: 'ohsquare';
+  font-family: var(--font-ohsquare);
   font-weight: 700;
 
   @include tablet {
@@ -128,7 +128,7 @@ h2 {
 h3 {
   // margin-bottom: 8px;
   font-size: 24px;
-  font-family: 'ohsquare';
+  font-family: var(--font-ohsquare);
   font-weight: 700;
 
   @include tablet {
@@ -150,7 +150,7 @@ h3 {
 
 .tag {
   padding: 4px 6px;
-  font-family: 'simple';
+  font-family: var(--font-simple);
   font-size: 14px;
   font-weight: 900;
   background: var(--point-1);
@@ -181,7 +181,7 @@ h3 {
   color: var(--text);
   transition: all 0.2s;
   // text-transform: uppercase;
-  font-family: 'simple';
+  font-family: var(--font-simple);
   font-size: 14px;
   font-weight: 900;
   &:hover {

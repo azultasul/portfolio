@@ -82,14 +82,23 @@
   }
 }
 
+.loading {
+  &__text {
+    animation: wave 1.6s infinite;
+
+    @for $i from 1 through 8 {
+      &:nth-child(#{$i}) {
+        animation-delay: 0.36s + 0.12s * $i;
+      }
+    }
+  }
+}
+
 @keyframes wave {
-  0% {
+  from {
     opacity: 0;
   }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
+  to {
     opacity: 1;
   }
 }
