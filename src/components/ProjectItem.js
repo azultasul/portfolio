@@ -33,7 +33,8 @@ const ProjectItem = ({ item }) => {
             <div className={styles.card__inner}>
               <div className={styles.card__client}>{item.client}</div>
               <div className={styles.card__date}>
-                {date.startDate} - {date.endDate}
+                <span>{date.startDate}</span>
+                {item.endDate && <span>&nbsp;-&nbsp;{date.endDate}</span>}
               </div>
             </div>
           </div>

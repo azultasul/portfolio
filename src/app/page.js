@@ -33,8 +33,9 @@ const Home = async () => {
                   <h3 className={styles.about__name}>
                     유다솔<span>(1994.05.20)</span>
                   </h3>
+                  <div>효율성을 추구하는 Frontend 개발자</div>
                   <div className={`tag-wrap ${styles.about__tags}`}>
-                    <span className="tag">Frontend 개발자</span>
+                    {/* <span className="tag">Frontend 개발자</span> */}
                     <span className="tag">React</span>
                     <span className="tag">Vue</span>
                     <span className="tag">인터랙션</span>

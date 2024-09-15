@@ -48,7 +48,7 @@ const Detail = async ({ params }) => {
               </div>
               <div className={styles.work__media}>
                 {item.video && <video src={`/images/projects/${project.id}/${item.video}`} autoPlay muted loop playsInline width="720"></video>}
-                {item.image && <Image src={`/images/projects/${project.id}/${item.image}`} alt={project.id} width="720" height="300" />}
+                {item.image && <Image src={`/images/projects/${project.id}/${item.image}`} alt={project.id} width="720" height="300" priority />}
               </div>
             </div>
           ))}

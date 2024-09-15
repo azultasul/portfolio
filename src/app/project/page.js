@@ -7,7 +7,6 @@ const Project = async () => {
   const db = (await connectDB).db('portfolio')
   let results = await db.collection('projects').find({ display: true }).toArray()
   let projects = JSON.parse(JSON.stringify(results))
-  // console.log('heads', projects)
 
   return (
     <>
