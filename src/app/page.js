@@ -54,7 +54,7 @@ const Home = async () => {
                   <Image src={`/images/icons/gmail.svg`} alt="gmail" width="20" height="20" />
                   <span className="btn btn--line">dasolyou@gmail.com</span>
                 </a>
-                <a className={styles.about__btn} href="/유다솔.pdf">
+                <a className={styles.about__btn} href="/프론트엔드개발자_유다솔_이력서.pdf">
                   <Image src={`/images/icons/download.svg`} alt="download" width="20" height="20" />
                   <span className="btn btn--line">이력서 보기</span>
                 </a>
@@ -124,40 +124,52 @@ const Home = async () => {
               </h3>
               <p>주전공: 물리학과 / 복수전공: 전자공학과</p>
               <p className={styles.text}>학점: 3.52 / 4.5</p>
+              <h3 className={styles.section__title}>
+                김포고등학교<span>(졸업: 2010.03 - 2013.02)</span>
+              </h3>
+              <p>인문계 고등학교 / 이과계열</p>
             </section>
 
             <section className={styles.section}>
               <h2 className={styles.title}>자격증/어학</h2>
+              <h3 className={styles.section__title}>
+                TOEIC Speaking Test<span>(영어)</span>
+              </h3>
+              <p>170점(AL) / 2025.07.06 / 한국TOEIC위원회</p>
+              <h3 className={styles.section__title}>SQL 개발자(SQLD)</h3>
+              <p>2025.04.04 / 한국데이터산업진흥원</p>
+              <h3 className={styles.section__title}>데이터 분석 준전문가(ADsP)</h3>
+              <p>2025.03.21 / 한국데이터산업진흥원</p>
               <h3 className={styles.section__title}>정보처리기사</h3>
               <p>2022.06.17 / 한국산업인력공단</p>
-              <h3 className={styles.section__title}>컴퓨터활용능력</h3>
-              <p>2급 / 2019.03.22 / 대한상공회의소</p>
-              <h3 className={styles.section__title}>
-                TOEIC<span>(영어)</span>
-              </h3>
-              <p>800점 / 2019.06.15 / 한국TOEIC위원회</p>
               <h3 className={styles.section__title}>
                 DELE<span>(스페인어)</span>
               </h3>
               <p>B1 / 2019.08.27 / Instituto Cervantes</p>
+              <h3 className={styles.section__title}>컴퓨터활용능력</h3>
+              <p>2급 / 2019.03.22 / 대한상공회의소</p>
+              <h3 className={styles.section__title}>2종보통운전면허</h3>
+              <p>2019.02.15 / 경찰청(운전면허시험관리단)</p>
             </section>
-            {/* <section className={styles.section}>
-              <h2 className={styles.title}>주요 프로젝트</h2>
-              {starProjects.length > 0 ? (
-                <div className={styles.contents__projects}>
-                  {starProjects.map((item, index) => (
-                    <StarItem item={item} key={index} />
-                  ))}
-                </div>
-              ) : (
-                <h2 className="nothing">프로젝트를 가져오는 중입니다 🙏🏼</h2>
-              )}
-              <div className={styles.contents__btn}>
-                <Link href="/project" scroll={false} className="btn btn--bg tag">
-                  전체 프로젝트 보기
-                </Link>
-              </div>
-            </section> */}
+
+            <section className={styles.section}>
+              <h2 className={styles.title}>경험/교육/활동</h2>
+              <h3 className={styles.section__title}>K-디지털 트레이닝: (현대로템) K-방산 AI모델 개발과정</h3>
+              <p>2024.12.10 ~ 2025.06.04 (960시간)</p>
+              <p>[ 학습 내용 ]</p>
+              <p>• Oracle DB에서 데이터 생성, 조작, 변환, 집계 등의 쿼리문 사용 실습</p>
+              <p>• Numpy, Pandas, Matplotlib 등 분석 및 시각화 라이브러리 사용</p>
+              <p>• Tensorflow, keras 등 라이브러리 사용 및 비정형 데이터 처리를 위한 딥러닝 모델 이해</p>
+              <p>• 사전학습, 전이학습, 파인튜닝 등 딥러닝 모델 활용을 위한 방법론 학습</p>
+              <p>[ 프로젝트 및 논문 ]</p>
+              <p>• XGBoost, LightGBM을 활용한 부동산 허위매물 분류 모델 구현</p>
+              <p>• RAG + AI 에이전트 기반의 식당 추천 챗봇 서비스 개발</p>
+              <p>• 전장 시뮬레이터를 활용한 전장 사물 인식 학습 모델 구현</p>
+              <p>• 논문: RAG 모델을 적용한 AI 에이전트 기반 챗봇 추천 서비스 아키텍쳐 설계 - 금융 및 보험 산업 중심으로</p>
+              <h3 className={styles.section__title}>스페인 교환학생</h3>
+              <p>2016.01 ~ 2017.01 (1년)</p>
+              <p>스페인어 자격증 취득 (DELE B1: 일상회화 수준) / 새로운 문화 경험 및 도전</p>
+            </section>
           </div>
         </div>
       </div>
