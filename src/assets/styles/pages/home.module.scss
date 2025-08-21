@@ -30,7 +30,7 @@
     @include tablet {
       & {
         display: flex;
-        align-items: flex-end;
+        align-items: flex-start;
         gap: 20px;
       }
     }
@@ -47,13 +47,23 @@
         margin-top: 20px;
       }
     }
+    @include mobile {
+      & {
+        margin-top: 16px;
+      }
+    }
   }
   &__name {
-    margin: 16px 0px 0px;
+    margin: 16px 0px;
 
     @include tablet {
       & {
         margin-top: 0px;
+      }
+    }
+    @include mobile {
+      & {
+        margin-bottom: 8px;
       }
     }
     span {
@@ -63,8 +73,18 @@
       vertical-align: baseline;
     }
   }
-  &__tags {
+  &__desc {
+    font-family: var(--font-simple);
+    font-weight: 300;
     margin-top: 4px;
+  }
+  &__tags {
+    margin-top: 16px;
+    @include mobile {
+      & {
+        margin-top: 8px;
+      }
+    }
   }
   &__btn {
     display: flex;
@@ -113,20 +133,22 @@
   &__tag {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     font-family: var(--font-simple);
     font-weight: 900;
+    font-size: 14px;
 
     @include mobile {
       & {
-        gap: 6px;
+        gap: 4px;
+        font-size: 12px;
       }
     }
     img {
       @include mobile {
         & {
-          width: 30px;
-          height: 30px;
+          width: 20px;
+          height: 20px;
         }
       }
     }

@@ -33,20 +33,18 @@ const Home = async () => {
                   <h3 className={styles.about__name}>
                     유다솔<span>(1994.05.20)</span>
                   </h3>
-                  <div>효율성을 추구하는 Frontend 개발자</div>
+                  <div className={styles.about__desc}>• 두 번의 프로젝트 리딩 (개발 리더)</div>
+                  <div className={styles.about__desc}>• 개발실 우수사원 선정 (2023.05)</div>
+                  <div className={styles.about__desc}>• AI 모델 개발과정 수료 (960시간)</div>
                   <div className={`tag-wrap ${styles.about__tags}`}>
-                    {/* <span className="tag">Frontend 개발자</span> */}
+                    <span className="tag">Frontend</span>
                     <span className="tag">React</span>
                     <span className="tag">Vue</span>
                     <span className="tag">인터랙션</span>
-                    <span className="tag">도전 정신</span>
-                    <span className="tag">문제 해결</span>
                     <span className="tag">커뮤니케이션</span>
+                    <span className="tag">논리적</span>
+                    <span className="tag">효율적</span>
                   </div>
-                  {/* <p>• 에이전시에서 여러 고객사의 요구사항에 맞춘 구축 프로젝트에 참여하며 다양한 기술 스택을 경험했습니다.</p>
-                  <p>
-                    • 여러 기술 스택을 경험하며 도전 정신과 문제 해결 능력을 키웠고, 두 번의 프로젝트 리더 경험을 통해 커뮤니케이션 능력을 발전시켰습니다.
-                  </p> */}
                 </div>
               </div>
               <div className={styles.about__bottom}>
@@ -69,7 +67,7 @@ const Home = async () => {
                   (item) =>
                     item.show && (
                       <span className={`${styles.section__tag}`} key={item.id}>
-                        <Image src={`/images/skills/${item.id}.svg`} alt="skill" width="35" height="35" />
+                        <Image src={`/images/skills/${item.id}.svg`} alt="skill" width="25" height="25" />
                         <span>{item.name}</span>
                       </span>
                     )
@@ -84,14 +82,14 @@ const Home = async () => {
                 </h2>
                 <div className={styles.career__btn}>
                   <NavigateBtn className="btn btn--bg tag" catName="type" catNum={1}>
-                    디파이 프로젝트 보기
+                    경력 프로젝트 보기
                   </NavigateBtn>
                 </div>
               </div>
               <div className={styles.career__contents}>
                 <div>
                   <h3 className={styles.section__title}>
-                    주식회사 엑스와이지원 <br />
+                    (주)엑스와이지원 <br />
                   </h3>
                   <p>개발실 / 선임</p>
                   <p className={styles.text}>2년 9개월 (2021.07 - 2024.03)</p>
@@ -131,37 +129,17 @@ const Home = async () => {
             </section>
 
             <section className={styles.section}>
-              <h2 className={styles.title}>자격증/어학</h2>
-              <h3 className={styles.section__title}>
-                TOEIC Speaking Test<span>(영어)</span>
-              </h3>
-              <p>170점(AL) / 2025.07.06 / 한국TOEIC위원회</p>
-              <h3 className={styles.section__title}>SQL 개발자(SQLD)</h3>
-              <p>2025.04.04 / 한국데이터산업진흥원</p>
-              <h3 className={styles.section__title}>데이터 분석 준전문가(ADsP)</h3>
-              <p>2025.03.21 / 한국데이터산업진흥원</p>
-              <h3 className={styles.section__title}>정보처리기사</h3>
-              <p>2022.06.17 / 한국산업인력공단</p>
-              <h3 className={styles.section__title}>
-                DELE<span>(스페인어)</span>
-              </h3>
-              <p>B1 / 2019.08.27 / Instituto Cervantes</p>
-              <h3 className={styles.section__title}>컴퓨터활용능력</h3>
-              <p>2급 / 2019.03.22 / 대한상공회의소</p>
-              <h3 className={styles.section__title}>2종보통운전면허</h3>
-              <p>2019.02.15 / 경찰청(운전면허시험관리단)</p>
-            </section>
-
-            <section className={styles.section}>
-              <h2 className={styles.title}>경험/교육/활동</h2>
+              <h2 className={styles.title}>교육 / 경험</h2>
               <h3 className={styles.section__title}>K-디지털 트레이닝: (현대로템) K-방산 AI모델 개발과정</h3>
               <p>2024.12.10 ~ 2025.06.04 (960시간)</p>
-              <p>[ 학습 내용 ]</p>
+              <br />
+              <p><b>[ 학습 내용 ]</b></p>
               <p>• Oracle DB에서 데이터 생성, 조작, 변환, 집계 등의 쿼리문 사용 실습</p>
               <p>• Numpy, Pandas, Matplotlib 등 분석 및 시각화 라이브러리 사용</p>
               <p>• Tensorflow, keras 등 라이브러리 사용 및 비정형 데이터 처리를 위한 딥러닝 모델 이해</p>
               <p>• 사전학습, 전이학습, 파인튜닝 등 딥러닝 모델 활용을 위한 방법론 학습</p>
-              <p>[ 프로젝트 및 논문 ]</p>
+              <br />
+              <p><b>[ 프로젝트 및 논문 ]</b></p>
               <p>• XGBoost, LightGBM을 활용한 부동산 허위매물 분류 모델 구현</p>
               <p>• RAG + AI 에이전트 기반의 식당 추천 챗봇 서비스 개발</p>
               <p>• 전장 시뮬레이터를 활용한 전장 사물 인식 학습 모델 구현</p>
@@ -169,6 +147,32 @@ const Home = async () => {
               <h3 className={styles.section__title}>스페인 교환학생</h3>
               <p>2016.01 ~ 2017.01 (1년)</p>
               <p>스페인어 자격증 취득 (DELE B1: 일상회화 수준) / 새로운 문화 경험 및 도전</p>
+            </section>
+
+            <section className={styles.section}>
+              <h2 className={styles.title}>자격증</h2>
+              <h3 className={styles.section__title}>SQL 개발자(SQLD)</h3>
+              <p>2025.04.04 / 한국데이터산업진흥원</p>
+              <h3 className={styles.section__title}>데이터 분석 준전문가(ADsP)</h3>
+              <p>2025.03.21 / 한국데이터산업진흥원</p>
+              <h3 className={styles.section__title}>정보처리기사</h3>
+              <p>2022.06.17 / 한국산업인력공단</p>
+              <h3 className={styles.section__title}>컴퓨터활용능력</h3>
+              <p>2급 / 2019.03.22 / 대한상공회의소</p>
+              <h3 className={styles.section__title}>2종보통운전면허</h3>
+              <p>2019.02.15 / 경찰청(운전면허시험관리단)</p>
+            </section>
+
+            <section className={styles.section}>
+              <h2 className={styles.title}>어학</h2>
+              <h3 className={styles.section__title}>
+                TOEIC Speaking Test<span>(영어)</span>
+              </h3>
+              <p>170점(AL급) / 2025.07.06 / 한국TOEIC위원회</p>
+              <h3 className={styles.section__title}>
+                DELE<span>(스페인어)</span>
+              </h3>
+              <p>B1 / 2019.08.27 / Instituto Cervantes</p>
             </section>
           </div>
         </div>
