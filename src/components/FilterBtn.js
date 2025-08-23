@@ -23,8 +23,11 @@ const FilterBtn = ({ catName, recoilValue, setRecoil, pjArray }) => {
         <button className={`${recoilValue.length > 0 ? 'tag btn btn--bg' : 'tag btn active'}`} onClick={() => setQueryNum(-1)}>
           All<span className={styles.btn__num}>{pjArray.length}</span>
         </button>
-        {Object.values(catData[catName]).map((item, index) => {
-          const num = pjArray && pjArray.filter((item) => item.includes(index)).length
+        {Object.entries(catData[catName]).map(([key, item], index) => {
+          const num = pjArray && pjArray.filter((techArray) => 
+            techArray.some(tech => tech === key)
+          ).length
+          
           return num > 0 ? (
             <button className={`${recoilValue.includes(index) ? 'tag btn active' : 'tag btn'}`} key={index} onClick={() => setQueryNum(index)}>
               {item.name}

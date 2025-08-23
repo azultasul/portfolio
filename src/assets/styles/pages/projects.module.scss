@@ -84,6 +84,11 @@
   &__desc {
     margin-top: 16px;
     text-indent: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
   }
   &__tags {
     justify-content: flex-end;
