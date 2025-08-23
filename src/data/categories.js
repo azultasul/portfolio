@@ -55,7 +55,7 @@ const tech = {
   langchain: { id: 'langchain', name: 'LangChain', show: true },
   langgraph: { id: 'langgraph', name: 'LangGraph', show: true },
   yolo: { id: 'yolo', name: 'YOLO', show: true },
-  opencv: { id: 'opencv', name: 'OpenCV', show: true },
+  opencv: { id: 'opencv', name: 'OpenCV', show: false },
   docker: { id: 'docker', name: 'Docker', show: true },
 
   'claude-code': { id: 'claude-code', name: 'Claude Code', show: true },

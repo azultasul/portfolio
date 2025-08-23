@@ -10,7 +10,7 @@ const Home = async () => {
   const db = (await connectDB).db('portfolio')
   let projects = await db
     .collection('projects')
-    .find({ star: true, type: [1] })
+    .find({ star: true, type: ['dfy'] })
     .project({ id: 1, title: 1, star: 1, thumb: 1, date: 1, endDate: 1, client: 1, learn: 1 })
     .sort({ date: -1 })
     .toArray()
@@ -81,7 +81,7 @@ const Home = async () => {
                   경력<span>(3년 9개월)</span>
                 </h2>
                 <div className={styles.career__btn}>
-                  <NavigateBtn className="btn btn--bg tag" catName="type" catNum={1}>
+                  <NavigateBtn className="btn btn--bg tag" catName="type" catNum={'dfy'}>
                     경력 프로젝트 보기
                   </NavigateBtn>
                 </div>
